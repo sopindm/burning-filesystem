@@ -16,6 +16,7 @@
 	   path-from-string
 	   path-to-string
 
+	   path-p
 	   file-path-p
 	   directory-path-p
 
