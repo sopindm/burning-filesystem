@@ -1,6 +1,7 @@
 (defpackage #:burning-filesystem
   (:use #:burning-lisp #:trivial-gray-streams)
-  (:export make-path
+  (:export path
+	   make-path
 	   path-root
 	   path-filesystem
 	   path-directory
