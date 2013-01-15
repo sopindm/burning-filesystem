@@ -155,7 +155,9 @@
   (from-pathname (ext:absolute-pathname ""))
   #+sbcl
   (from-pathname (cl:merge-pathnames ""))
-  #-(or clisp sbcl)
+  #+(and ccl unix)
+  (from-pathname (ccl:current-directory))
+  #-(or clisp sbcl (and ccl unix))
   (call-next-method))
 
 (defmethod fs-home-directory ((fs (eql 'common-filesystem)))
